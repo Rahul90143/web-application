@@ -1,0 +1,16 @@
+{% include 'base1.html' %}
+{% block content %}
+    <center><h2>USER</h2></center>
+    <div class="container2">
+		<h1>Submit News Article</h1>
+		<form action="/newscheck" method="post">
+			<label for="title">Title:</label>
+			<input type="text" id="title" name="title" required>
+			
+			<label for="news">News Content:</label>
+			<textarea id="news" name="news" rows="10" cols="50" required></textarea>
+			
+			<button type="submit">Submit</button>
+		</form>
+      </div>
+{% endblock %}

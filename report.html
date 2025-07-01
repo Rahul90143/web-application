@@ -1,0 +1,18 @@
+{% include 'base2.html' %}
+{% block content %}
+<center><div class="container3">
+    <h2 style="font-size: 50px; color: #2c3e50; margin-top: 20px;">NEWS</h2>
+    <h2 style="font-size: 60px; color: #3498db; margin-bottom: 20px;">Main source: {{ param2 }}</h2>
+    <ul style="list-style-type: none; padding: 0;">
+        <h1 style="font-size: 30px; color: #2c3e50; margin: 10px 0;">
+            {% for s_key, r_values in grouped_data.items() %}
+                <li style="margin: 10px 0;">
+                    <strong style="font-weight: bold; color: #2980b9;">{{ s_key }}:</strong>
+                    <span style="color: #555;">{{ ", ".join(r_values) }}</span>
+                </li>
+            {% endfor %}
+        </h1>
+    </ul>
+</div>
+</center>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% include 'base1.html' %}
+{% block content %}
+    <center><h2>NEWS</h2></center>
+    <center>
+        <table>
+            <tr>
+                <th>User name</th>
+                <th>Title</th>
+                <th>NEWS</th>
+                <th>Share</th>
+            </tr>
+            {% for loc in data %}
+            <tr>
+                <td>{{ loc[1] }}</td>
+                <td>{{ loc[2] }}</td>
+                <td>{{ loc[3] }}</td>
+                <td><a href="/send2?param1={{ loc[0] }}&param2={{ loc[2] }}&param3={{ loc[3] }}&param4={{ loc[1] }}">Share</a></td>
+            </tr>
+            {% endfor %}
+        </table></center>
+{% endblock %}

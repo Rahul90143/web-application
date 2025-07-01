@@ -1,0 +1,25 @@
+{% include 'base2.html' %}
+{% block content %}
+    <center><h2>NEWS</h2></center>
+    <center>
+        <table>
+            <tr>
+                <th>User name</th>
+                <th>Title</th>
+                <th>NEWS</th>
+                <th>REAL or Fake</th>
+                <th>Hash</th>
+                <th>Report</th>
+            </tr>
+            {% for loc in data %}
+            <tr>
+                <td>{{ loc[1] }}</td>
+                <td>{{ loc[2] }}</td>
+                <td>{{ loc[3] }}</td>
+                <td>{{ loc[4] }}</td>
+                <td>{{ loc[5] }}</td>
+                <td><a href="/report?param1={{ loc[0] }}&param2={{ loc[1] }}">Report</a></td>
+            </tr>
+            {% endfor %}
+        </table></center>
+{% endblock %}
